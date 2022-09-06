@@ -1,0 +1,21 @@
+{
+    "name": "raydragneel/authentication",
+    "version": "1.0.0",
+    "description": "Authentication module for codeigniter 4",
+    "type": "library",
+    "license": "Raydragneel License",
+    "authors": [
+        {
+            "name": "heraya",
+            "email": "herayafpm@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Raydragneel\\Authentication\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4 || ^8.0"
+    }
+}
