@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Authentication module for codeigniter 4",
     "type": "library",
-    "license": "MIT License",
+    "license": "MIT",
     "authors": [
         {
             "name": "heraya",
