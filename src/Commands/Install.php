@@ -20,7 +20,7 @@ class Install extends BaseCommand
         $files = array_diff(scandir($path), array('.', '..'));
         foreach ($files as $file) {
             if(!file_exists(APPPATH."/Database/Migrations/".$file)){
-                copy($path."/".$file,APPPATH."/Database/Migrations/".$file);
+                copy($path."/".$file,APPPATH."/Database/Migrations/".$file.".php");
             }
         }
         // Seeder Copy
