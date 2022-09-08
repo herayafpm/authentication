@@ -110,7 +110,11 @@ class AccountEntity extends BaseEntity
     }
     public function getModelPengguna()
     {
-        return model(str_replace("/","\\",$this->model_account->model_type));
+        if($this->model_account){
+            return model(str_replace("/","\\",$this->model_account->model_type));
+        }else{
+            return null;
+        }
     }
 
     public function saveDataPengguna($data)
@@ -193,7 +197,11 @@ class AccountEntity extends BaseEntity
     
     public function getPengguna()
     {
-        return $this->getModelPengguna()->where([$this->modelAccount->model_link => $this->username])->first();
+        if($this->modelAccount){
+            return $this->getModelPengguna()->where([$this->modelAccount->model_link => $this->username])->first();
+        }else{
+            return null;
+        }
     }
     
 
@@ -202,7 +210,7 @@ class AccountEntity extends BaseEntity
         if(file_exists(APPPATH."../storage/user_photo/".$this->username.".png")){
             return storage("user_photo/".$this->username.".png");
         }
-        return asset('img/user2-160x160.jpg');
+        return base_url('auth_assets/img/user2-160x160.jpg');
     }
 
 }

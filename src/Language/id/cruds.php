@@ -29,4 +29,10 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
+    'admin'     => [
+        'title'          => 'Admin',
+        'title_singular' => 'Admin',
+        'fields'         => [
+        ],
+    ],
 ];

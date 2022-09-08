@@ -5,7 +5,12 @@ use Raydragneel\Authentication\Libraries\Gate;
 if (!function_exists('main_url')) {
     function main_url($url)
     {
-        return base_url('main/' . $url);
+        $configAuth = config('Auth');
+        $str_url = $configAuth->redirect_login ?? 'main';
+        if(empty($str_url)){
+            $str_url = 'main';
+        }
+        return base_url($str_url.'/' . $url);
     }
 }
 if (!function_exists('asset')) {
@@ -76,7 +81,12 @@ if (!function_exists('array_filter_datatable')) {
 }
 if (!function_exists('url_main_is')) {
     function url_main_is($path){
-		return url_is('main/'.$path);
+        $configAuth = config('Auth');
+        $str_url = $configAuth->redirect_login ?? 'main';
+        if(empty($str_url)){
+            $str_url = 'main';
+        }
+		return url_is($str_url.'/'.$path);
 	}
 }
 if(!function_exists('formatMessage')){

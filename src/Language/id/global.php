@@ -34,7 +34,8 @@ return [
         'master_data' => [
             'title_singular' => 'Data Master',
             'sub_menu' => [
-                'account' => 'Akun'
+                'account' => 'Akun',
+                'admin' => 'Admin',
             ]
         ]
     ],

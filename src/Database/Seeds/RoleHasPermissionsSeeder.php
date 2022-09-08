@@ -13,5 +13,9 @@ class RoleHasPermissionsSeeder extends Seeder
         if($superadmin){
             $superadmin->assignPermissions('*');
         }
+        $admin = model(RoleModel::class)->where(['name' => 'Admin'])->first();
+        if($admin){
+            $admin->assignPermissions('*');
+        }
     }
 }

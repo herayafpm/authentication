@@ -17,22 +17,22 @@ class PermissionSeeder extends Seeder
                 'name' => 'manajemen_master'
             ],
             [
-                'name' => 'account_access'
+                'name' => 'admin_access'
             ],
             [
-                'name' => 'account_create'
+                'name' => 'admin_create'
             ],
             [
-                'name' => 'account_edit'
+                'name' => 'admin_edit'
             ],
             [
-                'name' => 'account_delete'
+                'name' => 'admin_delete'
             ],
             [
-                'name' => 'account_purge'
+                'name' => 'admin_purge'
             ],
             [
-                'name' => 'account_restore'
+                'name' => 'admin_restore'
             ],
         ];
         foreach ($permissions as $r) {
